@@ -16,5 +16,14 @@ public class SampleEntity1 {
 	public void setData2(String data2) {
 		this.data2 = data2;
 	}
-	
+	@Override
+	public String toString() {
+		return "SampleEntity1 [data1=" + data1 + ", data2=" + data2 + "]";
+	}
+	public SampleEntity1(String data1, String data2) {
+		super();
+		this.data1 = data1;
+		this.data2 = data2;
+	}
+
 }
