@@ -26,4 +26,7 @@ public class SampleEntity1 {
 		this.data2 = data2;
 	}
 
+	public SampleEntity1() {
+
+	}
 }
