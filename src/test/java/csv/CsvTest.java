@@ -19,6 +19,8 @@ import csv.domain.entities.csv.SampleEntity1Csv;
 import csv.domain.entities.csv.SampleEntity2Csv;
 import csv.domain.repositories.ICsvWrite;
 import csv.infrastructure.Writer;
+import kero.exception.KeroException;
+import kero.testutil.file.FileTestUtil;
 
 class CsvTest {
 
@@ -31,7 +33,7 @@ class CsvTest {
 	}
 
 	@Test
-	void test1() {
+	void test1() throws KeroException {
 
 
 		// 最初はファイルがないはず。あればエラーとする。
@@ -49,6 +51,9 @@ class CsvTest {
 
 		// ファイルができているはず。なければエラーとする。
 		assertTrue("ファイルが作成されていない",Files.exists(path));
+		assertTrue(FileTestUtil.FileToDataEqualsUTF8(path,"\"A\" , \"B\"\r\n" +
+				"\"C\" , \"D\"\r\n" +
+				"" ));
 	}
 
 	@Test
