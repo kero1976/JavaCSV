@@ -6,7 +6,12 @@ import java.util.List;
 import csv.domain.entities.SampleEntity1;
 import csv.domain.repositories.ICsvWrite;
 
-public class SampleEntity1Csv extends SampleEntity1 implements ICsvWrite {
+/**
+ *
+ * @author けろ
+ *
+ */
+public class SampleEntity1Csv  implements ICsvWrite {
 
 	private SampleEntity1 entity;
 
